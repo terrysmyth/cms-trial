@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="ph3 bg-off-white">
+	<div class="center mw6 pv3">
+
+		<h2>{{ .Title }}</h2>
+		<h3>{{ .Subtitle }}</h3>
+
+		<div class="flex-ns mb3">
+	        	{{ range .Params.post }}
+				<div>
+					<h3>{{ .Title }}</h3>
+					{{ if .Params.image }} <img src="{{ .Params.image }}" alt="{{ .Title }}">{{ end }}
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</div>
+
+{{ end }}
